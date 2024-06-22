@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" href="style.css">
+   <!-- <style>
+        .carousel-item {
+            display: none;
+        }
+        .carousel-item.active {
+            display: block;
+        }
+    </style>-->
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" href="#">Mi Página</a>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre Mí</a></li>
+                <li class="nav-item"><a class="nav-link" href="#servicios" id="serviciosLink">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacto" id="contactoLink" >Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main role="main" class="container">
+        <section id="inicio">
+            <h1>Personas</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <div id="carousel" class="carousel">
+                <div class="carousel-item active"><img src="Imagenes/Imagen1.jpg" alt="Imagen 1"></div>
+                <div class="carousel-item"><img src="Imagenes/Imagen2.jpg" alt="Imagen 2"></div>
+                <div class="carousel-item"><img src="Imagenes/Imagen3.jpg" alt="Imagen 3"></div>
+                <div class="carousel-item"><img src="Imagenes/Imagen4.jpg" alt="Imagen 4"></div>
+                <button class="carousel-control-prev">Prev</button>
+                <button class="carousel-control-next">Next</button>
+            </div>
+            <div class="lorem-text">
+                <h1>Explicacion</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            </div>
+            <button id="alertButton" class="btn">Haz clic aquí</button>
+        </section>
+    </main>
+    <button id="backToTopButton" class="btn" style="display:none;">Volver al inicio</button>
+    <div id="imageModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="Imagenes/Imagen1.jpg" alt="Imagen emergente" class="modal-image">
+        </div>
+    </div><!--
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Variables del carrusel
+            var carouselItems = document.querySelectorAll('.carousel-item');
+            var currentIndex = 0;
+
+            // Mostrar el primer elemento del carrusel
+            carouselItems[currentIndex].classList.add('active');
+
+            // Función para mostrar el elemento del carrusel anterior
+            function showPrev() {
+                carouselItems[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+                carouselItems[currentIndex].classList.add('active');
+            }
+
+            // Función para mostrar el siguiente elemento del carrusel
+            function showNext() {
+                carouselItems[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % carouselItems.length;
+                carouselItems[currentIndex].classList.add('active');
+            }
+
+            // Eventos de clic en los controles del carrusel
+            document.querySelector('.carousel-control-prev').addEventListener('click', showPrev);
+            document.querySelector('.carousel-control-next').addEventListener('click', showNext);
+
+            // Evento de clic para el botón "Haz clic aquí"
+            document.querySelector('#alertButton').addEventListener('click', function () {
+                var modal = document.getElementById('imageModal');
+                modal.style.display = 'block';
+            });
+
+            // Evento de clic para cerrar el modal
+            var modal = document.getElementById('imageModal');
+            var span = document.getElementsByClassName('close')[0];
+
+            span.onclick = function () {
+                modal.style.display = 'none';
+            }
+
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            }
+
+            // Evento de scroll para mostrar/ocultar el botón "Volver al inicio"
+            window.addEventListener('scroll', function () {
+                var scrollPosition = window.scrollY;
+                var backToTopButton = document.getElementById('backToTopButton');
+                if (scrollPosition + window.innerHeight >= document.body.offsetHeight) {
+                    backToTopButton.style.display = 'block';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
+            });
+
+            // Evento de clic para el botón "Volver al inicio"
+            document.querySelector('#backToTopButton').addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Evento de scroll para ocultar/mostrar la barra de navegación
+            window.addEventListener('scroll', function () {
+                var scrollPosition = window.scrollY;
+                var header = document.querySelector('header');
+                if (scrollPosition > 100) {
+                    header.style.opacity = '0';
+                } else {
+                    header.style.opacity = '1';
+                }
+            });
+
+            // Evento de scroll para cambiar el color de fondo del contenido principal
+            window.addEventListener('scroll', function () {
+                var scrollPosition = window.scrollY;
+                var mainContent = document.querySelector('main');
+                if (scrollPosition > 200) {
+                    mainContent.style.backgroundColor = '#f0f0f0';
+                } else {
+                    mainContent.style.backgroundColor = '';
+                }
+            });
+
+            // Evento keydown para mostrar imágenes del carrusel al presionar la tecla Space
+            document.addEventListener('keydown', function(event) {
+                if (event.code === 'Space') {
+                    event.preventDefault(); // Prevenir el comportamiento por defecto de la barra espaciadora
+                    carouselItems.forEach(function(item) {
+                        item.style.display = 'block';
+                    });
+                }
+            });
+        });
+    </script>-->
+    <script src="eventos.js"></script>
+</body>
+</html>
